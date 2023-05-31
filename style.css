@@ -1,13 +1,30 @@
         body {
-            background-color: black;
+            background-color:black;
             font-family: Montserrat;
-            font-weight: 200;
         }
 
         h1 {
             color: aliceblue;
             font-style:oblique;
             font-family: fantasy;
+            text-align: center;
+        }
+
+        #foto {
+            border-radius: 150px;
+            width: 300px;
+            height: 350px;
+            margin-left: 40px;
+            background-color: rgb(5, 134, 5);
+            padding: 2px;
+            
+        }
+
+        h3 {
+            color: aliceblue;
+            position: relative;
+            left: 50px;
+            top: 30px;
         }
 
         #text {
@@ -16,10 +33,10 @@
             font-style: italic;
             position: absolute;
             left: 400px;
-            top: 150px;
-            line-height: 30px;
-            width: 25%;
-            text-align: justify;
+            top: 130px;
+            line-height: 40px;
+            width: 380px;
+            text-align:left;
         }
 
         ul {
@@ -27,26 +44,34 @@
             font-size: 16px;
             line-height: 40px;
             text-decoration: none;
+            position: relative;
+            top: 20px;
+            left: 20px;
         }
 
         #site {
             font-size: 16px;
             line-height: 20px;
-            margin-left: 20px;
+            top: 130%;    
+            position: absolute;
+            left: 40px;
         }
 
         .link {
             line-height: 40px;
+            height: 50;
+            position: absolute;
+            top: 900px;
         }
 
-       #foto {
-        border-radius: 15px;
-        width: 300px;
-        height: 350px;
-        margin-left: 40px;
-       }
+        a {
+            text-decoration: none;
+            color: aliceblue;
+            height: 40px;
+            position: relative;
+        }
 
-       a {
-        text-decoration: none;
-        color: aliceblue;
-       }
+        #ementa {
+            position: absolute;
+            top:  870px;
+        }
