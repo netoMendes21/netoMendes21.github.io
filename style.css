@@ -1,0 +1,52 @@
+        body {
+            background-color: black;
+            font-family: Montserrat;
+            font-weight: 200;
+        }
+
+        h1 {
+            color: aliceblue;
+            font-style:oblique;
+            font-family: fantasy;
+        }
+
+        #text {
+            color: aliceblue;
+            font-size: 18px;
+            font-style: italic;
+            position: absolute;
+            left: 400px;
+            top: 150px;
+            line-height: 30px;
+            width: 25%;
+            text-align: justify;
+        }
+
+        ul {
+            color: aliceblue;
+            font-size: 16px;
+            line-height: 40px;
+            text-decoration: none;
+        }
+
+        #site {
+            font-size: 16px;
+            line-height: 20px;
+            margin-left: 20px;
+        }
+
+        .link {
+            line-height: 40px;
+        }
+
+       #foto {
+        border-radius: 15px;
+        width: 300px;
+        height: 350px;
+        margin-left: 40px;
+       }
+
+       a {
+        text-decoration: none;
+        color: aliceblue;
+       }
