@@ -5,9 +5,10 @@
 
         h1 {
             color: aliceblue;
-            font-style:oblique;
+            font-style:italic;
             font-family: fantasy;
             text-align: center;
+            font-weight:;
         }
 
         #foto {
@@ -23,8 +24,9 @@
         h3 {
             color: aliceblue;
             position: relative;
-            left: 50px;
+            left: 60px;
             top: 30px;
+            font-size: 20px;
         }
 
         #text {
@@ -33,7 +35,7 @@
             font-style: italic;
             position: absolute;
             left: 400px;
-            top: 130px;
+            top: 120px;
             line-height: 40px;
             width: 380px;
             text-align:left;
@@ -47,14 +49,19 @@
             position: relative;
             top: 20px;
             left: 20px;
+            width: 5%;
+            list-style-type:none;
+            font-weight: bold;
         }
 
         #site {
             font-size: 16px;
             line-height: 20px;
-            top: 130%;    
+            top: 110%;    
             position: absolute;
             left: 40px;
+            text-decoration: none;
+            color: aliceblue;
         }
 
         .link {
@@ -62,16 +69,32 @@
             height: 50;
             position: absolute;
             top: 900px;
+            width: 18%;
         }
 
-        a {
+        a:hover {
+            background-color: rgb(37, 187, 37);
             text-decoration: none;
             color: aliceblue;
             height: 40px;
             position: relative;
+        
         }
 
         #ementa {
             position: absolute;
-            top:  870px;
+            top:  860px;
+            left: 65px;
+            font-size: 20px;
         }
+
+        li:hover {
+            background-color: rgb(37, 187, 37);
+        }
+
+        ul.link li a {
+            color: white;
+            text-decoration: none;
+            list-style-type: none;
+        }
+
