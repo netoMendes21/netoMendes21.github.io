@@ -25,17 +25,19 @@
     </nav>
 
     <main id="inicio" class="cabecalho">
-      <div>
-        <img src="./assets/images/Neto.jpeg" alt="" />
-        <h1>José Luiz Neto</h1>
-        <p>Desenvolvedor Front End</p>
-      </div>
+      <img
+        src="./assets/images/neto.png"
+        alt="Foto do Neto"
+        class="foto-perfil"
+      />
+      <h1>José Luiz Neto</h1>
+      <p class="sub-title">Desenvolvedor Front End</p>
     </main>
 
     <section id="sobre" class="sobre">
-      <h2>Sobre Mim</h2>
-      <div>
-        <p>
+      <h2 class="sobre-titulo">Sobre Mim</h2>
+      <div class="sobre-caixa">
+        <p class="sobre-paragrafo">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque hic
           nihil nam dolore accusantium vitae rem quae excepturi fugiat? Velit
           animi deleniti obcaecati atque, hic voluptate est commodi nostrum
@@ -45,55 +47,69 @@
     </section>
 
     <section id="projetos" class="projetos">
-      <h2>Projetos</h2>
+      <h2 class="title-projects">Meus Projetos</h2>
       <div class="projetos-box">
         <div class="projetos-card">
           <img
             src="./assets/images/calculadora-imc.png"
             alt="Projeto calculadora de índice de massa corporal"
+            class="projetos-imagem"
           />
-          <h3 class="title-project">Calculadora IMC</h3>
-          <p class="info-project">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
-            aspernatur accusamus alias saepe iste error obcaecati
-          </p>
+          <div class="caixa-textos-projetos">
+            <h3 class="title-project">Calculadora IMC</h3>
+            <p class="info-project">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
+              aspernatur accusamus alias saepe iste error obcaecati
+            </p>
+          </div>
         </div>
 
         <div class="projetos-card">
           <img
             src="./assets/images/lista-paises.png"
             alt="Projeto Lista de países"
+            class="projetos-imagem"
           />
-          <h3 class="title-project">Lista de Países</h3>
-          <p class="info-project">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
-            aspernatur accusamus alias saepe iste error obcaecati
-          </p>
+          <div class="caixa-textos-projetos">
+            <h3 class="title-project">Lista de Países</h3>
+            <p class="info-project">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
+              aspernatur accusamus alias saepe iste error obcaecati
+            </p>
+          </div>
         </div>
 
         <div class="projetos-card">
-          <img src="./assets/images/newsletter.png" alt="NewsLetter" />
-          <h3 class="title-project">NewsLetter</h3>
-          <p class="info-project">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
-            aspernatur accusamus alias saepe iste error obcaecati
-          </p>
+          <img
+            src="./assets/images/newsletter.png"
+            alt="NewsLetter"
+            class="projetos-imagem"
+          />
+          <div class="caixa-textos-projetos">
+            <h3 class="title-project">NewsLetter</h3>
+            <p class="info-project">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
+              aspernatur accusamus alias saepe iste error obcaecati
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="contatos" class="contatos">
-      <h2 class="contatos-titulo">Contato</h2>
+    <section id="contato" class="contato">
+      <h2 class="contatos-titulo">Entre em Contato</h2>
       <form class="form-contact" id="formulario">
-        <div class="nome-form">
+        <div class="grupo-form">
           <input placeholder="Nome" type="text" class="campo-form" />
         </div>
         <div class="grupo-form">
           <textarea
             placeholder="Digite sua Mensagem"
-            class="text-form"
+            class="campo-form"
           ></textarea>
         </div>
+
+        <button type="submit" class="btn-form">Enviar Whatsapp</button>
       </form>
     </section>
   </body>
