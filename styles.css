@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --primary: #4f46e5;
+  --secondary: #7c3aed;
+  --dark: #0f172a;
+  --veryDark: #0a0f1c;
+  --light: #e2e8f0;
+  --glass: rgba(255, 255, 255, 0.1);
+}
+
+body {
+  background-color: var(--dark);
+  color: var(--light);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navigation {
+  position: fixed;
+  top: 0;
+  background-color: rgba(15, 23, 42, 0.8);
+  width: 100%;
+  z-index: 100;
+  padding: 1.5rem;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 3rem;
+}
+
+.menu-link {
+  text-decoration: none;
+  color: var(--light);
+  font-weight: 500;
+  position: relative;
+  padding: 0.5rem;
+}
