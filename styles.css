@@ -452,6 +452,8 @@ h1 span {
 }
 
 .projetos-card {
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 14px;
@@ -476,7 +478,10 @@ h1 span {
 }
 
 .caixa-textos-projetos {
+  display: flex;
   padding: 22px;
+  flex: 1;
+  flex-direction: column;
 }
 
 .project-index {
@@ -502,7 +507,8 @@ h1 span {
 
 .project-links {
   display: flex;
-  margin-top: 22px;
+  margin-top: auto;
+  padding-top: 22px;
   flex-wrap: wrap;
   gap: 10px;
 }
@@ -514,6 +520,7 @@ h1 span {
   flex: 1 1 112px;
   align-items: center;
   justify-content: center;
+  gap: 6px;
   border: 1px solid var(--line);
   border-radius: 8px;
   font-size: 0.82rem;
@@ -528,6 +535,17 @@ h1 span {
 .project-link:hover {
   transform: translateY(-2px);
   box-shadow: var(--small-elevation-shadow);
+}
+
+.project-link-arrow {
+  display: inline-block;
+  font-size: 1rem;
+  line-height: 1;
+  transition: transform 0.5s ease;
+}
+
+.project-link:hover .project-link-arrow {
+  transform: translate(1px, -1px);
 }
 
 .project-link:focus-visible {
