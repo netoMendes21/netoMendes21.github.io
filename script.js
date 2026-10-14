@@ -47,3 +47,26 @@ themeToggle?.addEventListener("click", () => {
 if (currentYear) {
   currentYear.textContent = String(new Date().getFullYear());
 }
+
+const revealTargets = document.querySelectorAll(
+  ".section-heading, .sobre-layout, .skills-window, .projetos-card, .contact-panel, .site-footer",
+);
+
+if ("IntersectionObserver" in window) {
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        entry.target.classList.toggle("is-visible", entry.isIntersecting);
+      });
+    },
+    {
+      threshold: 0.08,
+      rootMargin: "0px 0px -40px 0px",
+    },
+  );
+
+  revealTargets.forEach((element) => {
+    element.classList.add("scroll-reveal");
+    revealObserver.observe(element);
+  });
+}
