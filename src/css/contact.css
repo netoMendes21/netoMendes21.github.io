@@ -1,0 +1,115 @@
+.contato {
+  padding-top: 70px;
+  padding-bottom: 90px;
+}
+
+.contact-panel {
+  max-width: 790px;
+  margin: 0 auto;
+  padding: clamp(28px, 6vw, 56px);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: radial-gradient(ellipse at top right, rgba(124, 58, 237, 0.15), transparent 58%), var(--surface);
+  text-align: center;
+}
+
+.contact-panel h2 {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.contact-panel>p:not(.eyebrow) {
+  max-width: 580px;
+  margin: 16px auto 25px;
+  color: var(--muted);
+}
+
+.contact-links {
+  display: flex;
+  margin-top: 30px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.social-link {
+  display: grid;
+  width: 54px;
+  height: 54px;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--surface-raised);
+  color: var(--accent-bright);
+  transition: all 0.5s ease;
+}
+
+.social-link:hover {
+  background: var(--accent);
+  color: var(--accent-contrast);
+  transform: translateY(-1px);
+  box-shadow: var(--small-elevation-shadow);
+}
+
+.social-icon {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-color: currentColor;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+}
+
+.social-icon-whatsapp {
+  width: 22px;
+  height: 22px;
+  mask-image: url("../../assets/icons/whatsapp.svg");
+  -webkit-mask-image: url("../../assets/icons/whatsapp.svg");
+}
+
+.social-icon-mail {
+  mask-image: url("../../assets/icons/mail.svg");
+  -webkit-mask-image: url("../../assets/icons/mail.svg");
+}
+
+.social-icon-linkedin {
+  mask-image: url("../../assets/icons/linkedin.svg");
+  -webkit-mask-image: url("../../assets/icons/linkedin.svg");
+}
+
+.social-icon-github {
+  mask-image: url("../../assets/icons/github.svg");
+  -webkit-mask-image: url("../../assets/icons/github.svg");
+}
+
+.site-footer {
+  display: flex;
+  width: min(var(--content), calc(100% - 48px));
+  min-height: 76px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  border-top: 1px solid rgba(196, 181, 253, 0.12);
+  color: var(--muted);
+  font-size: 0.84rem;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+.site-footer a {
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.5s ease;
+}
+
+.site-footer a:hover {
+  color: var(--accent-bright);
+}

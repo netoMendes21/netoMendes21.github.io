@@ -1,0 +1,126 @@
+.site-header {
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  border-bottom: 1px solid var(--line);
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(18px);
+}
+
+.navigation {
+  display: flex;
+  width: min(var(--content), calc(100% - 48px));
+  min-height: 74px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.brand {
+  color: var(--text);
+  background: linear-gradient(110deg, #4f46e5 0%, var(--accent) 58%, var(--accent-bright) 100%);
+  background-clip: text;
+  font: 800 1.45rem/1 'Manrope', sans-serif;
+  letter-spacing: -0.08em;
+  text-decoration: none;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.brand span {
+  color: var(--accent);
+  -webkit-text-fill-color: var(--accent);
+}
+
+.menu {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  gap: clamp(18px, 4vw, 44px);
+  list-style: none;
+}
+
+.menu-link {
+  display: inline-block;
+  position: relative;
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.5rem 0;
+  transition: color 180ms ease;
+}
+
+.menu-link::after {
+  content: "";
+  height: 2px;
+  width: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(90deg, #4f46e5, #7c3aed);
+  transition: width 0.5s ease;
+}
+
+.menu-link:hover,
+.menu-link:focus-visible {
+  color: var(--text);
+}
+
+.menu-link:hover::after,
+.menu-link:focus-visible::after {
+  width: 100%;
+}
+
+.theme-toggle {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  flex: 0 0 auto;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.theme-toggle:hover {
+  border-color: var(--accent);
+  transform: rotate(-8deg);
+}
+
+.theme-icon {
+  display: block;
+  width: 19px;
+  height: 19px;
+  background-color: currentColor;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+}
+
+.theme-icon-sun {
+  mask-image: url("../../assets/icons/sun.svg");
+  -webkit-mask-image: url("../../assets/icons/sun.svg");
+}
+
+.theme-icon-moon {
+  mask-image: url("../../assets/icons/moon.svg");
+  -webkit-mask-image: url("../../assets/icons/moon.svg");
+}
+
+.theme-icon-moon,
+:root[data-theme="light"] .theme-icon-sun {
+  display: none;
+}
+
+:root[data-theme="light"] .theme-icon-moon {
+  display: block;
+}
