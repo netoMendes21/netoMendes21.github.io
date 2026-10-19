@@ -463,13 +463,10 @@ h1 span {
     border-color 400ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-@media (hover: hover) and (pointer: fine) {
-  .projetos-card:hover {
-    border-color: rgba(196, 181, 253, 0.48);
-    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12),
-      0 3px 8px rgba(0, 0, 0, 0.06);
-    transform: translateY(-5px);
-  }
+.projetos-card:hover {
+  border-color: rgba(196, 181, 253, 0.48);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-10px) scale(1.03);
 }
 
 .scroll-reveal {
@@ -921,14 +918,6 @@ h1 span {
     transition-duration: 0.5s !important;
   }
 
-  .projetos-card {
-    transform: none;
-  }
-
-  .projetos-card:hover {
-    transform: none;
-  }
-
   .theme-toggle,
   .button,
   .social-link,
@@ -940,5 +929,14 @@ h1 span {
   .scroll-reveal.is-visible {
     translate: none;
     transition: opacity 0.25s ease !important;
+  }
+
+  .projetos-card,
+  .projetos-card.scroll-reveal,
+  .projetos-card.scroll-reveal.is-visible {
+    transition: opacity 0.25s ease,
+      transform 400ms cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 400ms cubic-bezier(0.22, 1, 0.36, 1),
+      border-color 400ms cubic-bezier(0.22, 1, 0.36, 1) !important;
   }
 }
