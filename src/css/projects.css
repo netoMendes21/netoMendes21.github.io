@@ -12,25 +12,28 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  border: 1px solid var(--line);
+  border: 1px solid var(--glass-border);
   border-radius: 14px;
-  background: var(--surface);
+  background: linear-gradient(155deg, var(--glass-highlight), transparent 38%), var(--glass-tint), var(--glass-surface);
+  box-shadow: var(--glass-shadow);
+  backdrop-filter: blur(18px) saturate(125%);
+  -webkit-backdrop-filter: blur(18px) saturate(125%);
   transition: transform 400ms cubic-bezier(0.22, 1, 0.36, 1),
     box-shadow 400ms cubic-bezier(0.22, 1, 0.36, 1),
     border-color 400ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .projetos-card:hover {
-  border-color: rgba(196, 181, 253, 0.48);
+  border-color: rgba(147, 197, 253, 0.48);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   transform: translateY(-10px) scale(1.03);
 }
 
 .scroll-reveal {
   opacity: 0;
-  translate: 0 20px;
-  transition: opacity 1.15s cubic-bezier(0.4, 0, 0.2, 1),
-    translate 1.15s cubic-bezier(0.16, 1, 0.3, 1);
+  translate: 0 36px;
+  transition: opacity 1500ms cubic-bezier(0.22, 0.61, 0.36, 1) var(--reveal-delay, 0ms),
+    translate 1500ms cubic-bezier(0.22, 0.61, 0.36, 1) var(--reveal-delay, 0ms);
 }
 
 .scroll-reveal.is-visible {
@@ -38,9 +41,14 @@
   translate: 0 0;
 }
 
+.scroll-reveal:not(.is-visible) {
+  transition-duration: 0s !important;
+  transition-delay: 0s !important;
+}
+
 .projetos-card.scroll-reveal {
-  transition: opacity 1.15s cubic-bezier(0.4, 0, 0.2, 1),
-    translate 1.15s cubic-bezier(0.16, 1, 0.3, 1),
+  transition: opacity 1500ms cubic-bezier(0.22, 0.61, 0.36, 1) var(--reveal-delay, 0ms),
+    translate 1500ms cubic-bezier(0.22, 0.61, 0.36, 1) var(--reveal-delay, 0ms),
     transform 400ms cubic-bezier(0.22, 1, 0.36, 1),
     box-shadow 400ms cubic-bezier(0.22, 1, 0.36, 1),
     border-color 400ms cubic-bezier(0.22, 1, 0.36, 1);
@@ -116,15 +124,22 @@
   box-shadow: var(--small-elevation-shadow);
 }
 
-.project-link-arrow {
+.project-link-icon {
   display: inline-block;
-  font-size: 1rem;
-  line-height: 1;
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
   transition: transform 0.5s ease;
 }
 
-.project-link:hover .project-link-arrow {
-  transform: translate(1px, -1px);
+.project-link-icon-github {
+  background-color: currentColor;
+  mask: url("../../assets/icons/github.svg") center / contain no-repeat;
+  -webkit-mask: url("../../assets/icons/github.svg") center / contain no-repeat;
+}
+
+.project-link:hover .project-link-icon {
+  transform: translateY(-1px);
 }
 
 .project-link:focus-visible {
@@ -133,17 +148,19 @@
 }
 
 .project-link-primary {
-  border-color: transparent;
-  background: var(--accent);
+  border-color: var(--glass-border);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.16), transparent 55%), var(--accent-gradient);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.30);
   color: var(--accent-contrast);
 }
 
 .project-link-primary:hover {
-  background: var(--accent-bright);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.24), transparent 65%), var(--accent-gradient);
 }
 
 .project-link-secondary {
-  background: var(--surface-raised);
+  background: linear-gradient(145deg, var(--glass-highlight), transparent), var(--glass-surface);
+  box-shadow: inset 0 1px 0 var(--glass-highlight);
   color: var(--text);
 }
 

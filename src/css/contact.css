@@ -9,7 +9,11 @@
   padding: clamp(28px, 6vw, 56px);
   border: 1px solid var(--line);
   border-radius: 18px;
-  background: radial-gradient(ellipse at top right, rgba(124, 58, 237, 0.15), transparent 58%), var(--surface);
+  background: linear-gradient(155deg, var(--glass-highlight), transparent 40%), var(--glass-tint), var(--glass-surface);
+  border-color: var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  backdrop-filter: blur(18px) saturate(125%);
+  -webkit-backdrop-filter: blur(18px) saturate(125%);
   text-align: center;
 }
 
@@ -97,7 +101,7 @@
   align-items: center;
   justify-content: center;
   gap: 16px;
-  border-top: 1px solid rgba(196, 181, 253, 0.12);
+  border-top: 1px solid rgba(147, 197, 253, 0.12);
   color: var(--muted);
   font-size: 0.84rem;
 }

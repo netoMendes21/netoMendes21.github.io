@@ -19,7 +19,7 @@
 
 .brand {
   color: var(--text);
-  background: linear-gradient(110deg, #4f46e5 0%, var(--accent) 58%, var(--accent-bright) 100%);
+  background: linear-gradient(110deg, var(--accent) 0%, var(--accent-purple) 100%);
   background-clip: text;
   font: 800 1.45rem/1 'Manrope', sans-serif;
   letter-spacing: -0.08em;
@@ -60,7 +60,7 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  background: linear-gradient(90deg, #4f46e5, #7c3aed);
+  background: linear-gradient(90deg, var(--accent), var(--accent-purple));
   transition: width 0.5s ease;
 }
 
